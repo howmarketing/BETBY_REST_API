@@ -20,12 +20,12 @@
 - [x] **Branching Strategy:** (8min)
   - [x] Define a branching strategy (e.g., feature branches, development branch, main/master branch).
   - [x] Creating the development branches, update as origin, track the feature development branch;
-- [ ] 5min Add the very very first feature branch to be the fist PR from development; (…)
-  - [ ] The branch name should follow the GitFlow standards to commit a feature of non-effects application (…)
-    - [ ] `feat/chore` with base README.md documentation where it’s displayed what was requested to then follow on the tasks (TODO) section;
-    - [ ] Create the `README.md` file being simple and clean markdown-styled content;
-    - [ ] Push the branch;
-- [ ] 3min Create a PR for this previous chore feature;
+- [x] 5min Add the very very first feature branch to be the fist PR from development; (…)
+  - [x] The branch name should follow the GitFlow standards to commit a feature of non-effects application (…)
+    - [x] `feat/chore` with base README.md documentation where it’s displayed what was requested to then follow on the tasks (TODO) section;
+    - [x] Create the `README.md` file being simple and clean markdown-styled content;
+    - [x] Push the branch;
+- [x] 3min Create a PR for this previous chore feature;
 - [ ] 20min Create the GitHub Project to match the Agile Methodology as CT/TT (Client Track / Timeline Tasks) to achieve CI/CD (Continuous Integration/Delivery)
 - [ ] **BREAK:** (2min)
   - [ ] 2min Drink Water and Walk 20 steps;
@@ -43,7 +43,7 @@
 - [ ] **Deployment Strategy:** (5min)
   - [ ] Define a deployment strategy for your application. This might involve deploying to staging environments before production.
 - [ ] **Versioning:** (5min)
-  - [ ] Implement a versioning strategy for your application to manage releases effectively.
+  - [ ] Implement a versioning strategy for the application to manage releases effectively.
 - [ ]  **Monitoring and Logging:**
   - [ ] Set up monitoring and logging tools to ensure you can track and analyze your application's performance in different environments.
 - [ ]  **Documentation:**
@@ -53,4 +53,4 @@
 - [ ]  **Agile Board Integration:**
   - [ ] Utilize GitHub Projects or other Agile project management tools to create a board for tracking user stories, tasks, and sprints.
 - [ ]  **Feedback Loop:**
-  - [ ] Encourage regular feedback loops within the team to continuously improve processes.
+  - [ ] Request regular feedback loops within the client to continuously improve processes.
