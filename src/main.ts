@@ -13,7 +13,7 @@ async function bootstrap() {
     .setTitle('BETBY REST API')
     .setDescription('The BETBY REST API project')
     .setVersion('1.0')
-    .addTag('BETBY')
+    .addTag('BETBY REST API')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('openapi-swagger-ui', app, document);
