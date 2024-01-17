@@ -16,7 +16,7 @@ async function bootstrap() {
     .addTag('BETBY')
     .build();
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('api', app, document);
+  SwaggerModule.setup('openapi-swagger-ui', app, document);
 
   server = await app.listen(3000);
 }
