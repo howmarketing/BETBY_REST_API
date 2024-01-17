@@ -1,3 +1,15 @@
 {
-    "CodeGPT.apiKey": "CodeGPT Plus Beta"
+    "CodeGPT.apiKey": "CodeGPT Plus Beta",
+    "exportall.config.folderListener": [
+        "/src/api/DataTypes/DTO",
+        "/src/api/DataTypes/DAO",
+        "/src/api/DataTypes",
+        "/src/dtos",
+        "/src/daos"
+    ],
+    "cSpell.words": [
+        "daos",
+        "dtos",
+        "SRSTVP"
+    ]
 }
