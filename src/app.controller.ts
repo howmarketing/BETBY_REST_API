@@ -17,6 +17,7 @@ import {
   DTOGetBetByUserBody,
   DTOGetRecordsResponse,
 } from './dtos';
+import { DTOGetBetByUserBodyParams } from './api/DataTypes';
 
 export const BodyDTO = createParamDecorator(
   (data: unknown, ctx: ExecutionContext) => {
@@ -26,7 +27,7 @@ export const BodyDTO = createParamDecorator(
 );
 @Controller('apps')
 export class AppController {
-  private readonly select = {
+  private readonly select: { [x in keyof DTOGetBetByUserResponse]: true } = {
     id: true,
     userId: true,
     betId: true,
@@ -36,8 +37,6 @@ export class AppController {
     username: true,
     createdAt: true,
     updatedAt: true,
-    password: false,
-    encrypt: false,
   };
 
   constructor(
@@ -81,7 +80,7 @@ export class AppController {
   }
 
   @Post('create-record')
-  async createRecord(@BodyDTO() body: DTOGetBetByUserBody) {
+  async createRecord(@BodyDTO() body: DTOGetBetByUserBodyParams) {
     const record = await this.recordData(body);
     return {
       success: true,
@@ -101,21 +100,22 @@ export class AppController {
   }
 
   async recordData(
-    data: DTOGetBetByUserBody,
+    data: DTOGetBetByUserBodyParams,
   ): Promise<DTOGetBetByUserResponse> {
     const id = randomUUID();
-    const publicKey = `$501$3-02$404-${id}`;
-    const privateKey = `S0901E3544T32SRSTVP-${publicKey}`;
+    // const publicKey = `$501$3-02$404-${id}`;
+    // const privateKey = `S0901E3544T32SRSTVP-${publicKey}`;
+    const { betId, name, lastName, username, email, password } = data;
     const member = await this.prismaService.betByUser.create({
       select: this.select,
       data: {
         userId: id,
-        betId: data.betId || 1,
-        name: data.name || '',
-        lastName: data.lastName || '',
-        email: data.email || 'no-email@host.net',
-        username: data.username || '',
-        password: data.password || `${publicKey}-${privateKey}`,
+        betId,
+        name,
+        lastName,
+        email,
+        username,
+        password,
         encrypt: `$501$3-02$404-${randomUUID()}`,
       },
     });

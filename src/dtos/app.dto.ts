@@ -1,5 +1,4 @@
 import { DAOBetByUser } from 'types/DAOs';
-
 export type PickBetByUserDAOPropertiesBetByUsersDAOBody = [
   'userId',
   'betId',
@@ -22,6 +21,8 @@ export type PickBetByUserDAOPropertiesBetByUsersDAOResponse = [
   'lastName',
   'email',
   'username',
+  'createdAt',
+  'updatedAt',
 ][number];
 export type DTOGetBetByUserResponse = Pick<
   DAOBetByUser,
