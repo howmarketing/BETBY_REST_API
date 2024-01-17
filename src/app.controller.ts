@@ -75,7 +75,7 @@ export class AppController {
         cursor: {
           id,
         },
-        data,
+        data: data.reverse(),
       },
     };
   }
